@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Registration</title>
+<link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css}"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <a class="navbar-brand" href="#" th:href="@{/welcome}">E-Pass</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#" th:href="@{/logout}">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#" th:href="@{/index}">Admin</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Update E-pass</li>
+  </ol>
+</nav>
+ <div class="container">
+        <h1 class="mt-4">Citizen and E-pass Management System</h1>
+        <hr>
+        <h2>Update Citizen data</h2>
+
+        <form action="#" th:action="@{/saveCiti}" th:object="${citizen}" method="POST">
+
+            <!-- Add hidden form field to handle update -->
+            <input type="hidden" th:field="*{id}" />
+		<div class="form-row">
+		
+			<div class="form-group col-md-4">
+           <input type="text" th:field="*{firstName}" class="form-control mb-4 mr-2">
+       		</div>
+           <div class="form-group col-md-4">
+           <input type="text" th:field="*{middleName}" class="form-control mb-4 mr-2">
+			</div>
+			<div class="form-group col-md-4">
+            <input type="text" th:field="*{lastName}" class="form-control mb-4 mr-2">
+         </div></div>
+		<div class="form-row">	
+		
+			<div class="form-group col-md-3">
+            <input type="text" th:field="*{phoneNo}" class="form-control mb-4  mr-2">
+            </div>
+            <div class="form-group col-md-3">
+            <input type="text" th:field="*{email}" class="form-control mb-4 mr-2">
+            </div>
+            <div class="form-group col-md-3">
+            <input type="text" th:field="*{aadhaarNo}" class="form-control mb-4 mr-2">
+            </div>
+        </div>
+        <div class="form-row">  
+        	<div class="form-group col-md-3">  
+            <input type="text" th:field="*{streetAddress}" class="form-control mb-4 mr-2">
+            </div>
+            <div class="form-group col-md-3">
+             <input type="text" th:field="*{city}" class="form-control mb-4 mr-2">
+             </div>
+             <div class="form-group col-md-3">
+              <input type="text" th:field="*{state}" class="form-control mb-4 mr-2">
+              </div>
+              <div class="form-group col-md-3">
+              <input type="text" th:field="*{postalCode}" class="form-control mb-4 mr-2">
+              </div>
+              </div>
+              <div class="form-row">
+              <div class="form-group col-md-3">
+              <input type="text" th:field="*{type}" class="form-control mb-4 mr-2">
+               </div>
+               <div class="form-group col-md-3">
+            <input type="text" th:field="*{source}" class="form-control mb-4 mr-2">
+            </div>
+            <div class="form-group col-md-3">
+             <input type="text" th:field="*{destination}" class="form-control mb-4 mr-2">
+            </div>
+            <div class="form-group col-md-3">
+            <input type="text" th:field="*{status}" class="form-control mb-4 mr-2">
+            </div></div>
+
+            <button type="submit" class="btn btn-info col-2"> Update Pass</button>
+        </form>
+
+        <hr>
+
+        <a th:href="@{/index}"> Back to Citizen List</a>
+    </div>
+
+<script th:src="@{https://code.jquery.com/jquery-3.2.1.slim.min.js}"></script>
+<script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js}"></script>
+<script th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js}"></script>
+</body>
+</html>

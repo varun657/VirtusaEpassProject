@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Welcome Page</title>
+
+<!-- <link rel="stylesheet" type="text/css"
+ th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" /> -->
+<link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css}"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <a class="navbar-brand" href="#" th:href="@{/welcome}">E-Pass</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#" th:href="@{/login}">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="jumbotron jumbotron-fluid bg-light text-dark">
+  <div class="container">
+    <h1 class="display-4">Login now to request E-Pass</h1>
+    <p class="lead">Your government e-seva e-pass portal is here!</p>
+    <hr class="my-4">
+  <p>You can travel from one state to another hassle free with proper permission from the government by just the click of a button!</p>
+  </div>
+</div>
+<div class="container">
+<div class="row">
+<div id="accordion">
+<div class="card">
+    <div class="card-header" id="headingOne">
+    <h2>E - PASS REGISTER</h2>
+    <h5>for Movement During Lockdown (for Migrant Labourers, Student, Essential supplier, etc)</h5>
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          View details about what states are allowing E-passes 
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+       <div class="row"><div class="col-xl-4 col-md-6"><ul><li>Andaman and Nicobar</li><li>Andhra Pradesh</li><li>Arunachal Pradesh</li><li>Assam</li><li>Bihar</li><li>Chandigarh</li><li>Chattisgarh</li><li>Dadra and Nagar Haveli & Daman and Diu</li><li>Delhi</li><li>Goa</li><li>Gujarat</li><li>Haryana</li><li>Hiamchal Pradesh</li></ul></div>
+       <div class="col-xl-4 col-md-6"><ul><li>Jammu and Kashmir</li><li>Jharkhand</li><li>Karnataka</li><li>Kerala</li><li>Ladhak</li><li>Lakshwadeep</li><li>Maharashtra</li><li>Manipur</li><li>Meghalaya</li><li>Mizoram</li><li>Madhya Pradesh</li><li>Nagaland</li><li>Odisha</li><li>Poducherry</li></ul></div>
+       <div class="col-xl-4 col-md-6"><ul><li>Punjab</li><li>Rajasthan</li><li>Sikkim</li><li>Tamil Nadu</li><li>Telengana</li><li>Tripura</li><li>Uttar Pradesh</li><li>Uttarakhand</li><li>West Bengal</li></ul></div> 
+      </div>
+      <div class="col-xl-12"><p>Government of India is taking all necessary steps to ensure that we are prepared well to face the challenge and threat posed by the growing pandemic of COVID-19 the Corona Virus. With active support of the people of India, we have been able to contain the spread of the Virus in our country. The most important factor in preventing the spread of the Virus locally is to empower the citizens with the right information and taking precautions as per the advisories being issued by Ministry of Health & Family Welfare.</p></div>
+    </div>
+  </div>
+</div>
+</div></div></div>
+<script th:src="@{https://code.jquery.com/jquery-3.2.1.slim.min.js}"></script>
+<script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js}"></script>
+<script th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js}"></script>
+</body>
+</html>

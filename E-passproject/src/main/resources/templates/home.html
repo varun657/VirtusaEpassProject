@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Home</title>
+
+<!-- <link rel="stylesheet" type="text/css"
+ th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" /> -->
+<link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css}"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <a class="navbar-brand" href="#">E-Pass</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#" th:href="@{/logout}">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<br>
+<div class="jumbotron jumbotron-fluid bg-light text-dark">
+  <div class="container">
+    <h2 class="display-4">Welcome User! We will make sure you'll have a safe journey.</h2>
+    <p class="lead">So apply for movement pass during lockdown now! </p>
+  </div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-sm-6">
+<div class="card">
+  
+  <div class="card-body">
+    <h5 class="card-title">Apply for E-pass</h5>
+    <p class="card-text">
+    <ul>
+    <li>Fill in all the mandatory details carefully and submit.</li>
+    <li>After successful submission of your application, an application reference number will get generated. Please note it to track the application status.</li>
+    <li>Keep a soft/hard copy of the e-pass while traveling and show it to the security personnel if asked.</li>
+    </ul>
+    </p>
+    <a th:href="@{/showNewCitizenForm}" class="btn btn-primary btn-lg mb-3 ml-4"> Apply for E-Pass</a>
+  </div>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Track your Application</h5>
+    <p class="card-text">
+    <ul>
+    <li>If your application is approved, you can also download your movement pass from here.</li>
+    <li>Please use the reference id to track your application.</li>
+    </ul>
+    </p>
+    <a th:href="@{/checkPass}" class="btn btn-primary btn-lg mb-3 ml-4">Track E-Pass</a>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<script th:src="@{https://code.jquery.com/jquery-3.2.1.slim.min.js}"></script>
+<script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js}"></script>
+<script th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js}"></script>
+</body>
+</html>
